@@ -1,0 +1,330 @@
+---
+---
+
+<section id="kontakt" class="section-padding">
+  <div class="container">
+    <div class="contact-header animate-in">
+      <span class="section-label">Kontakt</span>
+      <h2 class="section-title">Wir sind für Sie da</h2>
+      <p class="section-subtitle">
+        Ob Angebotsanfrage, Auftragserteilung oder dringende technische Störung – melden Sie sich einfach!
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact form -->
+      <form
+        id="contact-form"
+        class="contact-form animate-in"
+        action="https://submit-form.com/YOUR_FORM_ID"
+        method="POST"
+        novalidate
+        aria-label="Kontaktformular"
+      >
+        <input type="hidden" name="_redirect" value="false" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Max Mustermann" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="+49 ..." autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail *</label>
+          <input type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Art der Anfrage</label>
+          <select id="subject" name="subject">
+            <option value="">Bitte wählen...</option>
+            <option value="Angebotsanfrage">Angebotsanfrage</option>
+            <option value="Auftragserteilung">Auftragserteilung</option>
+            <option value="Störung">Dringende technische Störung</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Nachricht *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie Ihr Anliegen..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn" id="contact-submit-btn" aria-label="Anfrage absenden">
+          <span class="btn-text">Anfrage absenden</span>
+          <span class="btn-loader" aria-hidden="true" style="display:none">Wird gesendet…</span>
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+
+        <div id="form-success" class="form-message success" role="alert" aria-live="polite" style="display:none">
+          ✅ Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.
+        </div>
+        <div id="form-error" class="form-message error" role="alert" aria-live="polite" style="display:none">
+          ❌ Es ist ein Fehler aufgetreten. Bitte rufen Sie uns direkt an.
+        </div>
+      </form>
+
+      <!-- Quick contact sidebar -->
+      <div class="quick-contact animate-in delay-2">
+        <h3>Schnell & direkt</h3>
+
+        <a href="tel:+491629554175" class="quick-btn primary-btn" id="contact-phone-main" aria-label="Jetzt anrufen: +49 162 9554175">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <div>
+            <span>Jetzt anrufen</span>
+            <small>+49 162 9554175</small>
+          </div>
+        </a>
+
+        <a href="https://wa.me/491629554175" class="quick-btn whatsapp-btn" id="contact-whatsapp-main" target="_blank" rel="noopener" aria-label="WhatsApp schreiben">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          </svg>
+          <div>
+            <span>WhatsApp</span>
+            <small>+49 162 9554175</small>
+          </div>
+        </a>
+
+        <a href="mailto:info@elektro-touch.de" class="quick-btn email-btn" id="contact-email-main" aria-label="E-Mail schreiben">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          <div>
+            <span>E-Mail schreiben</span>
+            <small>info@elektro-touch.de</small>
+          </div>
+        </a>
+
+        <div class="response-note" aria-label="Antwortzeit">
+          <span>💬</span>
+          <p>Wir antworten in der Regel innerhalb weniger Stunden – auch abends und am Wochenende über WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  input, select, textarea {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s;
+    width: 100%;
+    outline: none;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.5;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(245,158,11,0.1);
+  }
+
+  select option { background: var(--color-bg-dark); }
+  textarea { resize: vertical; min-height: 120px; }
+
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-message {
+    padding: 0.85rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .form-message.success {
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.3);
+    color: #86efac;
+  }
+
+  .form-message.error {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #fca5a5;
+  }
+
+  /* Quick contact */
+  .quick-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: sticky;
+    top: 6rem;
+  }
+
+  .quick-contact h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .quick-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border: 1px solid var(--color-border);
+  }
+
+  .quick-btn span { display: block; font-size: 0.9rem; }
+  .quick-btn small { display: block; font-size: 0.75rem; color: var(--color-text-muted); font-weight: 400; }
+  .quick-btn:hover { transform: translateX(4px); }
+
+  .primary-btn { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+  .primary-btn svg { color: var(--color-primary); }
+  .primary-btn:hover { background: rgba(245,158,11,0.15); border-color: var(--color-primary); }
+
+  .whatsapp-btn { background: rgba(37,211,102,0.08); border-color: rgba(37,211,102,0.2); }
+  .whatsapp-btn svg { color: #25d366; }
+  .whatsapp-btn:hover { background: rgba(37,211,102,0.12); border-color: #25d366; }
+
+  .email-btn { background: var(--color-bg-card); }
+  .email-btn svg { color: var(--color-primary); }
+  .email-btn:hover { background: var(--color-bg-card-hover); border-color: var(--color-primary); }
+
+  .response-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .response-note p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .quick-contact { position: static; }
+  }
+
+  @media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 1.25rem; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('contact-submit-btn') as HTMLButtonElement | null;
+  const btnText = form?.querySelector('.btn-text') as HTMLElement | null;
+  const btnLoader = form?.querySelector('.btn-loader') as HTMLElement | null;
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !btnText || !btnLoader) return;
+
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'block';
+    successMsg!.style.display = 'none';
+    errorMsg!.style.display = 'none';
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg!.style.display = 'block';
+        form.reset();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      errorMsg!.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      btnText.style.display = 'block';
+      btnLoader.style.display = 'none';
+    }
+  });
+</script>

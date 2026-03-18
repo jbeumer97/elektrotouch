@@ -1,0 +1,160 @@
+---
+const services = [
+  {
+    id: "industrie",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m5 8 3 3 3-3 3 3 3-3"/></svg>`,
+    title: "Industrie & Anlagen",
+    description: "Vor-Ort-Service für Industrieanlagen, Wartung von Motoren & Transformatoren, Frequenzumrichter-Optimierung und sichere Arbeiten direkt im Betrieb zur Minimierung von Ausfallzeiten.",
+    features: ["Prüfung & Wartung", "Frequenzumrichter", "Anlagenstillstände", "Instandhaltung"]
+  },
+  {
+    id: "gewerbe",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    title: "Gewerbe & Büros",
+    description: "Planung und Umsetzung von DIN-gerechter Beleuchtung, USV-Anlagen, Videoüberwachung, Zutrittskontrolle und kompletter Server- & Technikraum-Infrastruktur.",
+    features: ["LED-Modernisierung", "USV-Anlagen", "Videoüberwachung", "Serverräume"]
+  },
+  {
+    id: "privat",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    title: "Smart Home & Privat",
+    description: "Von der klassischen Steckdose über Netzwerk-Verkabelung bis hin zur komplexen Smart-Home-Gebäudesteuerung und Sicherheitsprüfung nach VDE-Normen.",
+    features: ["Smart-Home", "Sicherungskästen", "VDE-Prüfung", "Fehlersuche"]
+  },
+  {
+    id: "emobilitaet",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+    title: "Wallboxen & E-Mobilität",
+    description: "Fachgerechte Montage, elektrischer Anschluss und Konfiguration von Ladestation nach aktuellen VDE-Normen inkl. Lastmanagement für sofortige Betriebsbereitschaft.",
+    features: ["Wandladestation", "Lastmanagement", "VDE-konform", "Konfiguration"]
+  }
+];
+---
+
+<section id="leistungen" class="section-padding">
+  <div class="container">
+    <div class="section-header animate-in">
+      <span class="section-label">Was wir machen</span>
+      <h2 class="section-title">Unsere Leistungen</h2>
+      <p class="section-subtitle">
+        Elektrotechnik für jeden Bereich – zuverlässig, fachgerecht und nach aktuellen Normen.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      {services.map((service, index) => (
+        <article class={`card service-card animate-in delay-${index + 1}`} id={`service-${service.id}`}>
+          <div class="service-icon" aria-hidden="true" set:html={service.icon} />
+          <h3 class="service-title">{service.title}</h3>
+          <p class="service-description">{service.description}</p>
+          <ul class="service-features" aria-label={`Leistungen: ${service.title}`}>
+            {service.features.map((f) => (
+              <li>
+                <span class="feature-dot" aria-hidden="true">✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(245,158,11,0.12);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 0.75rem;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+    transition: all 0.3s;
+  }
+
+  .service-card:hover .service-icon {
+    background: rgba(245,158,11,0.2);
+    transform: scale(1.05);
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+    margin-top: auto;
+  }
+
+  .service-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+  }
+
+  .feature-dot {
+    color: var(--color-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
