@@ -1,0 +1,125 @@
+<section id="problem" class="section-padding" style="background: var(--color-bg-quartz);">
+  <div class="container relative">
+    <div class="bg-glow" style="top: -20%; left: -10%; opacity: 0.3;"></div>
+    
+    <div class="section-header reveal">
+      <span class="section-label">Status Quo</span>
+      <h2 class="section-title">Der Aligner-Markt<br />im Umbruch</h2>
+    </div>
+    
+    <div class="problem-grid">
+      <div class="problem-intro reveal delay-1">
+        <p class="lead-text">
+          Lange Zeit galt der Aligner-Markt als Innovationsmotor. Heute beobachten wir eine zunehmende Commodityisierung, die zulasten der Behandlungsqualität geht.
+        </p>
+        <p>
+          Viele etablierte Anbieter haben ihre Produktion in geografisch ferne Regionen verlagert, um Kosten zu optimieren. Für Sie als Behandler bedeutet das oft:
+        </p>
+      </div>
+      
+      <div class="problem-cards">
+        <div class="lux-card reveal delay-1">
+          <div class="card-icon">01</div>
+          <h3>Intransparenz</h3>
+          <p>Mangelnde Transparenz über den tatsächlichen Herstellungsort und die verwendeten Materialien.</p>
+        </div>
+        
+        <div class="lux-card reveal delay-2">
+          <div class="card-icon">02</div>
+          <h3>Distanz</h3>
+          <p>Erschwerte Kommunikation mit Planern durch Sprachbarrieren und Zeitverschiebung.</p>
+        </div>
+        
+        <div class="lux-card reveal delay-3">
+          <div class="card-icon">03</div>
+          <h3>Abhängigkeit</h3>
+          <p>Das Gefühl, die Kontrolle über den digitalen Workflow an eine "Blackbox" abzugeben.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="problem-footer reveal delay-3">
+      <p class="observation">
+        „Wir beobachten, dass immer mehr Praxen den Wunsch nach lokaler Nähe und echter Partnerschaft neu entdecken.“
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    margin-bottom: 5rem;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .lead-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+  .problem-intro p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+    max-width: 480px;
+  }
+
+  .problem-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card-icon {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.5;
+  }
+
+  .lux-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .lux-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+
+  .problem-footer {
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--color-border);
+    max-width: 800px;
+  }
+
+  .observation {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-primary);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1024px) {
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    .problem-intro p {
+      max-width: none;
+    }
+  }
+</style>

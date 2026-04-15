@@ -1,0 +1,216 @@
+<section id="prozess" class="section-padding overflow-hidden">
+  <div class="container relative">
+    <div class="section-header reveal">
+      <span class="section-label">Präzision im Detail</span>
+      <h2 class="section-title">Ein Workflow ohne<br />Kompromisse</h2>
+      <p class="section-subtitle">
+        Vom ersten Scan bis zur finalen Lieferung – wir setzen auf einen Prozess, der Transparenz und Qualität auf medizinischem Spitzenniveau vereint.
+      </p>
+    </div>
+
+    <div class="process-grid reveal delay-1">
+      <div class="process-step">
+        <div class="step-line"></div>
+        <div class="step-card glass">
+          <span class="step-index">01</span>
+          <h3>Digitale Erfassung</h3>
+          <p>Präziser Scan oder klassische Abformung als Basis für die Planung.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-line"></div>
+        <div class="step-card glass">
+          <span class="step-index">02</span>
+          <h3>Fachplanung</h3>
+          <p>Experten im deutschen Labor erstellen Ihren individuellen Behandlungsplan.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-line"></div>
+        <div class="step-card glass">
+          <span class="step-index">03</span>
+          <h3>Freigabe</h3>
+          <p>Sie prüfen, modifizieren und bestätigen den Plan in Echtzeit online.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-line"></div>
+        <div class="step-card glass">
+          <span class="step-index">04</span>
+          <h3>Manufaktur</h3>
+          <p>Präzisionsfertigung mittels modernster 3D-Technik in Deutschland.</p>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-line"></div>
+        <div class="step-card glass">
+          <span class="step-index">05</span>
+          <h3>Logistik</h3>
+          <p>Sicherer Express-Versand direkt in Ihre Praxis innerhalb weniger Tage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-focus reveal delay-2">
+      <div class="focus-content">
+        <h3 class="text-gradient">Volle Kontrolle für den Behandler</h3>
+        <p>Bei Modern Clear sind Sie nicht nur Anwender, sondern aktiver Partner. Sie haben jederzeit direkten Zugriff auf unsere Techniker und können Details individuell abstimmen – ohne Sprachbarrieren und Zeitverzögerung.</p>
+      </div>
+      <div class="focus-visual">
+         <div class="visual-stack">
+            <img src="/images/planning.png" alt="High-End Dental Planning" class="focus-img" />
+            <div class="visual-glow"></div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    margin-bottom: 8rem;
+    max-width: 800px;
+  }
+
+  .section-subtitle {
+     font-size: 1.25rem;
+     color: var(--color-text-muted);
+     line-height: 1.6;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 12rem;
+  }
+
+  .process-step {
+    position: relative;
+    padding-top: 3rem;
+  }
+
+  .step-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+  }
+
+  .step-line::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .step-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-lux);
+    height: 100%;
+    transition: all 0.4s ease;
+  }
+
+  .step-card:hover {
+    background: white;
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lux);
+  }
+
+  .step-index {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.5;
+  }
+
+  .step-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .process-focus {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 8rem;
+    align-items: center;
+    background: var(--color-bg-quartz);
+    padding: 6rem;
+    border-radius: var(--radius-lux);
+  }
+
+  .focus-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .focus-content p {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .focus-visual {
+    position: relative;
+  }
+
+  .visual-stack {
+    position: relative;
+    z-index: 1;
+  }
+
+  .focus-img {
+    width: 100%;
+    border-radius: var(--radius-lux);
+    box-shadow: var(--shadow-lux);
+  }
+
+  .visual-glow {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, var(--color-accent-glow) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1;
+  }
+
+  @media (max-width: 1200px) {
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+    .process-step {
+      padding-top: 0;
+      padding-left: 3rem;
+    }
+    .step-line {
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .process-focus {
+      grid-template-columns: 1fr;
+      padding: 3rem;
+      gap: 4rem;
+    }
+  }
+</style>

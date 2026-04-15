@@ -6,7 +6,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = 'ElektroTouch – Ihr Partner für moderne Elektrotechnik im Kreis Mettmann. Zuverlässige Elektroarbeiten für Industrie, Gewerbe und private Haushalte.' } = Astro.props;
+const { title, description = 'Modern Clear – High-End Aligner Produktion aus Deutschland. Maximale Präzision und Kontrolle für Fachpraxen.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,29 +27,26 @@ const { title, description = 'ElektroTouch – Ihr Partner für moderne Elektrot
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <title>{title}</title>
 
-    <!-- JSON-LD Local Business Schema -->
+    <!-- JSON-LD Medical Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ElectricalContractor",
-        "name": "ElektroTouch",
-        "telephone": "+49 162 9554175",
-        "email": "info@elektro-touch.de",
-        "url": "https://elektro-touch.de",
-        "areaServed": "Kreis Mettmann",
+        "@type": "MedicalBusiness",
+        "name": "Modern Clear Lab GmbH",
+        "telephone": "+49 30 000 00 00",
+        "email": "hallo@modernclear.de",
+        "url": "https://modernclear.de",
+        "description": "Premium Aligner Produktion Made in Germany.",
         "address": {
           "@type": "PostalAddress",
-          "addressRegion": "Nordrhein-Westfalen",
+          "streetAddress": "Musterstraße 123",
+          "addressLocality": "Berlin",
+          "postalCode": "10115",
           "addressCountry": "DE"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+49 162 9554175",
-          "contactType": "customer service",
-          "availableLanguage": "German"
         }
       }
     </script>
